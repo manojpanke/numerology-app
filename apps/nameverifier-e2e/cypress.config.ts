@@ -6,11 +6,11 @@ export default defineConfig({
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
       webServerCommands: {
-        default: 'pnpm exec nx run @numerology/nameverifier:serve',
-        production: 'pnpm exec nx run @numerology/nameverifier:serve-static',
+        default: 'pnpm exec nx run @numerology-workspace/nameverifier:serve',
+        production: 'pnpm exec nx run @numerology-workspace/nameverifier:serve-static',
       },
       ciWebServerCommand:
-        'pnpm exec nx run @numerology/nameverifier:serve-static',
+        'pnpm exec nx run @numerology-workspace/nameverifier:serve-static',
       ciBaseUrl: 'http://localhost:4200',
     }),
     baseUrl: 'http://localhost:4200',

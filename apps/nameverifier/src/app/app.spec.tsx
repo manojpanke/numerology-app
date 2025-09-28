@@ -20,7 +20,7 @@ describe('App', () => {
       </BrowserRouter>
     );
     expect(
-      getAllByText(new RegExp('Welcome @numerology/nameverifier', 'gi'))
+      getAllByText(new RegExp('Welcome @numerology-workspace/nameverifier', 'gi'))
         .length > 0
     ).toBeTruthy();
   });

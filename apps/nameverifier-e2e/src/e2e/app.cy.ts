@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('@numerology/nameverifier-e2e', () => {
+describe('@numerology-workspace/nameverifier-e2e', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {

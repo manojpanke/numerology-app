@@ -1,5 +1,5 @@
 export default {
-  displayName: '@numerology/nameverifier',
+  displayName: '@numerology-workspace/nameverifier',
   preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
