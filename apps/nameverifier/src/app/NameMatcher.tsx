@@ -10,27 +10,27 @@ const NameMatcher = () => {
     C: 3,
     D: 4,
     E: 5,
-    F: 6,
-    G: 7,
-    H: 8,
-    I: 9,
+    F: 8,
+    G: 3,
+    H: 5,
+    I: 1,
     J: 1,
     K: 2,
     L: 3,
     M: 4,
     N: 5,
-    O: 6,
-    P: 7,
-    Q: 8,
-    R: 9,
-    S: 1,
-    T: 2,
-    U: 3,
-    V: 4,
-    W: 5,
-    X: 6,
-    Y: 7,
-    Z: 8,
+    O: 7,
+    P: 8,
+    Q: 1,
+    R: 2,
+    S: 3,
+    T: 4,
+    U: 6,
+    V: 6,
+    W: 6,
+    X: 5,
+    Y: 1,
+    Z: 7,
   };
   // Function to reduce a number to single digit
   const reduceToSingleDigit = (num: number): number => {
@@ -49,19 +49,23 @@ const NameMatcher = () => {
       .split('')
       .reduce((sum, ch) => sum + (alphabetNumberMap[ch] || 0), 0);
 
-    const singleDigit = reduceToSingleDigit(total+2);
-    if (singleDigit === 3 || singleDigit === 5) {
+    const singleDigit = reduceToSingleDigit(total + 3);
+    if (singleDigit === 1 || singleDigit === 5) {
       setStatus(true);
-      setSuccess(`${text} is matched with numerology and addition is: ${singleDigit}`);
+      setSuccess(
+        `${text} is matched with numerology and addition is: ${singleDigit}`
+      );
     } else {
       setStatus(false);
-      setFailure(`${text} is not matched with numerology, addition is: ${singleDigit}`);
+      setFailure(
+        `${text} is not matched with numerology, addition is: ${singleDigit}`
+      );
     }
   };
 
   return (
     <div className="container mt-5">
-      <h1 className="text-primary">🚀 Numerology name matcher!</h1>
+      <h1 className="text-primary">🚀 Numerology name matcher!🚀</h1>
       <form>
         <div className="mb-3">
           <label htmlFor="nameInput" className="form-label">
@@ -76,9 +80,10 @@ const NameMatcher = () => {
             required
           />
         </div>
-        {status ? (
+        {status === true && (
           <div className="alert alert-success">{success}</div>
-        ) : (
+        )}
+        {status === false && (
           <div className="alert alert-danger">{failure}</div>
         )}
       </form>
