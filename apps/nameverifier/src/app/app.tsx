@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Route, Routes, Link } from 'react-router-dom';
 import NameMatcher from './NameMatcher';
 
 const StyledApp = styled.div`
